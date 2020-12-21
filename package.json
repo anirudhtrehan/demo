@@ -1,0 +1,34 @@
+{
+  "name": "Autoupdate",
+  "version": "3.0.0",
+  "description": "",
+  "main": "main.js",
+  "scripts": {
+    "start": "electron .",
+    "pack": "electron-builder --dir",
+    "dist": "electron-builder"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "electron": "^11.1.0",
+    "electron-builder": "^22.9.1"
+  },
+  "build": {
+    "appId": "com.autoupdater",
+    "target": "nsis",
+    "directories": {
+      "output": "build"
+    },
+    "nsis": {
+      "allowToChangeInstallationDirectory": true,
+      "oneClick": false
+    }
+  },
+  "deploy": "electron-builder build --win --publish always",
+  "repository": {
+    "type" : "git",
+    "url" : "https://github.com/anirudhtrehan/demo.git"
+  }
+}
